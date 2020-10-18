@@ -36,7 +36,11 @@ public class callAPI {
 	
     
 
-	
+	/**
+	 * This method will be use for sending post request
+	 * @param endpoint
+	 * @return
+	 */
 	public static Response post(String endpoint) {
 		RestAssured.baseURI ="https://reqres.in/api";
 		RequestSpecification request = RestAssured.given();			
