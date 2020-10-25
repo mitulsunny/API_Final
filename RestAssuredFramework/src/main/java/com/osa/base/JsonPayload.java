@@ -1,6 +1,7 @@
 package com.osa.base;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import org.json.simple.JSONObject;
 
@@ -23,8 +24,10 @@ public class JsonPayload {
 	 * @param hashMap
 	 * @return
 	 */
-public static  String payload(HashMap<String,String> hashMap) {
+public static  String payload(Map<String,String> hashMap) {
+	
 		JSONObject jo=new JSONObject(hashMap);
 		return jo.toString();
+		
   }
 }

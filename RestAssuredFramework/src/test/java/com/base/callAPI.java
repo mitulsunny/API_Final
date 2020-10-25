@@ -1,7 +1,10 @@
 package com.base;
 
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+import com.api_Steps.Rest_Steps;
 import com.osa.base.JsonPayload;
 
 import io.restassured.RestAssured;
@@ -50,12 +53,17 @@ public class callAPI {
 	 * post("/endpoint")
 	 * Need to include body
 	 */
+
+	
+	
 	public static Response post(String endpoint) {
+		String value=Rest_Steps.l;
 		RestAssured.baseURI ="https://reqres.in/api";
-		RequestSpecification request = RestAssured.given();			
+		RequestSpecification request = RestAssured.given();
+		
 		Response res=request
 				.contentType(ContentType.JSON)
-				.body("JsonPayload.payload()")
+				.body(value)
 				.post(endpoint);
 		return res;
 	}
