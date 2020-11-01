@@ -14,7 +14,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class callAPI {
 	//When I send a "GET" request using the endpoint "/users?id=2"
-
+  public static RequestSpecification request;
 	public static Response executeRquest(String request, String endPoint) {
 		String req=request.toLowerCase();
 		Response res=null;
@@ -57,9 +57,9 @@ public class callAPI {
 	
 	
 	public static Response post(String endpoint) {
-		String value=Rest_Steps.l;
+		String value=Rest_Steps.l.toString();
 		RestAssured.baseURI ="https://reqres.in/api";
-		RequestSpecification request = RestAssured.given();
+		 request = RestAssured.given();
 		
 		Response res=request
 				.contentType(ContentType.JSON)

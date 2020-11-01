@@ -24,10 +24,11 @@ public class JsonPayload {
 	 * @param hashMap
 	 * @return
 	 */
-public static  String payload(Map<String,String> hashMap) {
+public static  JSONObject payload(Map<String,String> hashMap) {
 	
 		JSONObject jo=new JSONObject(hashMap);
-		return jo.toString();
+		
+		return jo;
 		
   }
 }
